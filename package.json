@@ -1,0 +1,30 @@
+{
+  "name": "diel-energia-backend-technical-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/server.ts",
+    "knex": "node --import tsx ./node_modules/.bin/knex",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:run": "npm run knex -- migrate:latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "faker": "^6.6.6",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.4"
+  }
+}

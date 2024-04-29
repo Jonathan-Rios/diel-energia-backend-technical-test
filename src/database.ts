@@ -1,3 +1,5 @@
+import path from 'node:path'
+
 import { knex as setupKnex, Knex } from 'knex'
 import { env } from './env'
 
@@ -18,7 +20,10 @@ export const config: Knex.Config = {
   useNullAsDefault: true,
   migrations: {
     extension: 'ts',
-    directory: './db/migrations',
+    directory: path.resolve(__dirname, '..', 'db', 'migrations'),
+  },
+  seeds: {
+    directory: path.resolve(__dirname, '..', 'db', 'seeds'),
   },
 }
 

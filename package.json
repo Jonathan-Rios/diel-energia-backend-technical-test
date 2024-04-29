@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "tsx --watch src/server.ts",
     "knex": "node --import tsx ./node_modules/.bin/knex",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migration:run": "npm run knex -- migrate:latest"
+    "knex:seed": "npm run knex -- seed:run",
+    "knex:migration": "npm run knex -- migrate:latest"
   },
   "keywords": [],
   "author": "",
